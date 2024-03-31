@@ -12,21 +12,21 @@ import {
    TitleContent,
    UtilityList,
    Img,
-} from "./ProjectsStyles";
+} from "./ExperienceStyles";
 import {
    Section,
    SectionDivider,
    SectionText,
    SectionTitle,
 } from "../../styles/GlobalComponents";
-import { projects } from "../../constants/constants";
+import { experience } from "../../constants/constants";
 
-const Projects = () => (
-   <Section nopadding id='projects'>
+const Experience = () => (
+   <Section nopadding id='experience'>
       <SectionDivider />
-      <SectionTitle main>Projects</SectionTitle>
+      <SectionTitle main>Professional Experience</SectionTitle>
       <GridContainer>
-         {projects.map(
+         {experience.map(
             ({ id, image, title, description, tags, source, visit, featuresList }) => (
                <BlogCard key={id}>
                   <Img src={image} />
@@ -43,21 +43,21 @@ const Projects = () => (
                   </ul>
                   </CardInfo>
                   <div>
-                     <TitleContent style={{marginTop: "10px"}}> Tech-Stack</TitleContent>
+                     <TitleContent style={{marginTop: "10px"}}>Tech-Stack</TitleContent>
                      <TagList>
                         {tags.map((tag, i) => (
                            <Tag key={i}>{tag}</Tag>
                         ))}
                      </TagList>
                   </div>
-                  <UtilityList>
+                  {/* <UtilityList>
                      <ExternalLinks href={visit} target='_blank'>
                         Visit
                      </ExternalLinks>
                      <ExternalLinks href={source} target='_blank'>
                         Source Code
                      </ExternalLinks>
-                  </UtilityList>
+                  </UtilityList> */}
                </BlogCard>
             )
          )}
@@ -65,4 +65,4 @@ const Projects = () => (
    </Section>
 );
 
-export default Projects;
+export default Experience;

@@ -26,11 +26,16 @@ const Header = () => (
                }}
             >
                <DiCssdeck size='3rem' />
-               <Span>Portfolio</Span>
+               <Span>Md Aamir Khan</Span>
             </a>
          </Link>
       </Div1>
       <Div2>
+         <li>
+            <Link href='#experience'>
+               <NavLink>Experience</NavLink>
+            </Link>
+         </li>
          <li>
             <Link href='#projects'>
                <NavLink>Projects</NavLink>
